@@ -1,0 +1,7 @@
+<!--pages/articleList/articleList.wxml-->
+
+<article 
+    article="{{article}}" 
+    like_status="{{article.like_status}}" 
+    comments="{{comments}}"
+    bind:like="onLike"></article>

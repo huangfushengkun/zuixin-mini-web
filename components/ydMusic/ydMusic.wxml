@@ -1,0 +1,15 @@
+<!--components/ydMusic/ydMusic.wxml-->
+<view class='player-controller'>
+  <image class="play-img" 
+  bind:tap="onPlay" 
+  src="{{playing?pauseSrc:playSrc}}"></image>
+
+  <!-- <image src='/images/play.png' wx:if="{{!status}}"></image> -->
+  <!-- <image src='/images/stop.png' wx:else></image> -->
+</view>
+<view class='player'>
+  <view class='progress'>
+    <view class='progress-bar' style="width:{{width}}%"></view>
+  </view>
+  <text class="time">{{time}}</text>
+</view>

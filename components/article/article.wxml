@@ -1,0 +1,45 @@
+<!--components/article/article.wxml-->
+<wxs src="./article.wxs" module="replace"/>
+<view class='article'>
+  <view class="article-header">
+    <yd-music src="{{article.mp3_url}}" title="{{article.title}}"></yd-music>
+    <image class="article-img" src='{{article.img_url}}'></image>
+    <view class="article-info">
+      <view class="title">{{article.title}}</view>
+      <view class="human">
+      文：{{article.author}} 主播：{{article.podcast}}
+      </view>
+    </view>
+    <view class="bottom"></view>
+  </view>
+  <view class="article-content">
+    <rich-text nodes="{{replace(article.content)}}"></rich-text>
+  </view>
+  <yd-comments comments="{{comments}}" />
+  <!-- <view class="comments">
+    <view class="comment-top">
+      <view class="Boutique">精选留言</view>
+      <view class="comment-add">写留言</view>
+    </view>
+    <view class="comment-list">
+      <view class="comment">
+        <view class="comment-img">
+          <view class="image">
+            槜
+          </view>
+        </view>
+        <view class="comment-info">
+          <view class="info-top">
+            <view class="comment-nickname">槜在心里</view>
+            <view class="comment-like_nums">赞</view>
+          </view>
+          <view>人生的一场遗憾！！</view>
+        </view>
+      </view>
+    </view>
+  </view> -->
+  <!-- <button bindtap='like' data-id='{{article.id}}'>点击</button> -->
+  <view class='like {{like_status ? "active" : ""}}' bindtap='like' data-id='{{article.id}}'>
+    <image src='/images/like.png' data-id='{{article.id}}'></image>
+  </view>
+</view>

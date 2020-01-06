@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/my/my",
+    "pages/classic/classic",
+    "pages/heart/heart",
+    "pages/like/like",
+    "pages/articleList/articleList"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "美艳如诗",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#d54620"
+  },
+  "tabBar": {
+    "selectedColor": "#000000",
+    "backgroundColor": "#ffffff",
+    "color": "#c7c7c7",
+    "list": [
+      {
+        "selectedIconPath": "/images/tab/classic@highlight.png",
+        "iconPath": "/images/tab/classic.png",
+        "pagePath": "pages/classic/classic",
+        "text": "流行"
+      },
+      {
+        "selectedIconPath": "/images/tab/book@highlight.png",
+        "iconPath": "/images/tab/book.png",
+        "pagePath": "pages/heart/heart",
+        "text": "槜心"
+      },
+      {
+        "selectedIconPath": "/images/tab/classic@highlight.png",
+        "iconPath": "/images/tab/classic.png",
+        "pagePath": "pages/like/like",
+        "text": "喜欢"
+      },
+      {
+        "selectedIconPath": "/images/tab/my@highlight.png",
+        "iconPath": "/images/tab/my.png",
+        "pagePath": "pages/my/my",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap80.json",
+  "requiredBackgroundModes":["audio"]
+}

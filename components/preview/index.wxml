@@ -1,0 +1,14 @@
+
+<wxs src="./index.wxs" module="replace"/>
+
+<view catch:tap="onTap" class="container">
+  <view class="head">
+    <h-tag text="{{typeText}}" tag-class="tag" />
+    <h-like class="like" read-only="{{true}}" like="{{true}}" count="{{classic.fav_nums}}" />
+  </view>
+  <image wx:if="{{classic.type==400}}" class="other-img" src="{{classic.img_url}}"></image>
+  <image wx:else class="{{classic.type==200?'music-img':'other-img'}}" src="{{classic.img_url}}"></image>
+  <!-- <view class="text">{{classic.content}}</view> -->
+  <rich-text class="text" nodes="{{replace(classic.content)}}"></rich-text>
+
+</view>

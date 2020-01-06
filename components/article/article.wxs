@@ -1,0 +1,7 @@
+var replace= function (content) {
+  var reg = getRegExp('\s', 'g')
+  if (content) {
+    return content.replace(reg, '<br>')
+  }
+}
+module.exports = replace

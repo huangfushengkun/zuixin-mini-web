@@ -1,0 +1,49 @@
+/* pages/classic/classic.wxss */
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center；
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    height: 100rpx;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1rpx solid #f5f5f5;
+    border-top: 1rpx solid #f5f5f5;
+}
+.episode {
+    margin-left: 20rpx;
+    margin-top: 4rpx;
+}
+.like {
+    margin-top: 6rpx;
+}
+.navi {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 40rpx;
+}
+
+.like-container {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    margin-right: 30rpx;
+}
+
+.share-btn {
+    margin-top: 28rpx;
+    margin-left: 10rpx;
+}
+
+.share {
+    width: 40rpx;
+    height: 40rpx;
+}

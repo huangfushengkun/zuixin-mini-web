@@ -1,0 +1,25 @@
+<!--components/comments/index.wxml-->
+<view class="comments">
+  <view class="comment-top">
+    <view class="Boutique">精选留言</view>
+    <view class="comment-add">写留言</view>
+  </view>
+  <view class="comment-list" wx:if="{{!comments.length}}">
+    快来抢沙发吧！！
+  </view>
+  <view wx:else class="comment-list">
+    <view class="comment" wx:for="{{comments}}" wx:key="{{index}}">
+      <view class="comment-img">
+        <view class="image">{{item.nickname[0] || '秘'}}</view>
+      </view>
+      <view class="comment-info">
+        <view class="info-top">
+          <view class="comment-nickname">{{item.nickname || '神秘人'}}</view>
+          <view class="comment-like_nums">赞{{item.like_nums}}</view>
+        </view>
+        <view>{{item.content}}</view>
+      </view>
+    </view>
+  </view>
+  
+</view>

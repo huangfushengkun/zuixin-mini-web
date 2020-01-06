@@ -1,0 +1,61 @@
+/* components/comments/index.wxss */
+/* 留言区样式 start */
+.comments {
+    box-sizing: border-box;
+    /* width: 100%; */
+    margin: 20rpx 20rpx 10rpx;
+  }
+  .comment-top {
+    display: flex;
+    justify-content: space-between;
+  }
+  .Boutique {
+    color: #666;
+    font-size: 26rpx;
+  }
+  .comment-add {
+    color: rgb(39, 99, 139);
+    font-size: 26rpx;
+  }
+  
+  .comment-list {
+    margin-top: 30rpx;
+    width: 100%;
+    /* background-color: purple; */
+  }
+  .comment {
+    display: flex;
+    justify-content: space-between;
+  }
+  .comment-img {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ff6700;
+    margin-bottom: 20rpx;
+  }
+  .comment-img .image {
+    /* width: 80rpx; */
+    /* height: 80rpx; */
+    font-size: 46rpx;
+  }
+  .comment-info {
+    box-sizing: border-box;
+    width: 87%;
+    padding-right: 5%;
+  }
+  .info-top {
+    margin-bottom: 20rpx;
+    display: flex;
+    justify-content: space-between;
+  }
+  .comment-nickname {
+    color: #666;
+    font-size: 24rpx;
+  }
+  .comment-like_nums {
+    font-size: 24rpx;
+    color: rgb(39, 99, 139);
+  }
+  /* 留言区样式 end */

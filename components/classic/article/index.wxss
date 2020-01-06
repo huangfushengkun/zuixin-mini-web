@@ -1,0 +1,56 @@
+/* components/classic/music/index.wxss */
+.music-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    /* justify-content: space-between; */
+    /* justify-content: center; */
+    max-height: 900rpx;
+}
+
+.music-img {
+    width: 422rpx;
+    height: 422rpx;
+    margin-top: 62rpx;
+    border-radius: 50%;
+}
+
+.music-tag {
+    width: 44rpx;
+    height: 128rpx;
+    /* position: relative; */
+    position: absolute;
+    left:40rpx;
+    bottom:300rpx;
+}
+
+.play-img {
+    width: 120rpx;
+    height: 120rpx;
+    /* position: relative; */
+    position: absolute;
+    top:210rpx;
+}
+.content {
+    margin-top: 30rpx;
+    position: relative;
+    font-size: 36rpx;
+    max-width: 550rpx;
+    max-height: 360rpx;
+    overflow: auto;
+}
+
+.rotation {
+    -webkit-transform: rotate(360deg);
+    animation: rotation 12s linear infinite;
+}
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
