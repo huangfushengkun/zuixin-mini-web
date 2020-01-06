@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/my/my",
     "pages/classic/classic",
+    "pages/my/my",
     "pages/heart/heart",
     "pages/like/like",
     "pages/articleList/articleList"

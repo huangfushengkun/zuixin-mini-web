@@ -1,5 +1,7 @@
 {
   "usingComponents": {
-    "article": "/components/article/article"
+    "article": "/components/article/article",
+    "yd-comments": "/components/comments/index"
+
   }
 }

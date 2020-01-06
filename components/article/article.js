@@ -12,9 +12,6 @@ Component({
     },
     like_status:{
       type:Boolean
-    },
-    comments:{
-      type:Array
     }
   },
 

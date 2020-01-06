@@ -1,7 +1,6 @@
 {
   "component": true,
   "usingComponents": {
-    "yd-music": "/components/ydMusic/ydMusic",
-    "yd-comments": "/components/comments/index"
+    "yd-music": "/components/ydMusic/ydMusic"
   }
 }

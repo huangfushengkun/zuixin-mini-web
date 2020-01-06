@@ -13,19 +13,57 @@ Page({
    */
   data: {
     article: {},
-    comments:[]
-    
+    comments:[],
+    inputValue:'',
+    hiddenmodalput:false,
   },
-  // methods: {
-    onLike:function (event) {
-      let behavior = event.detail.behavior
-      likeModel.like(behavior,this.data.article.id,this.data.article.type)
-      // this.setData({
-      //   article
-      // })
-    },
-  // },
+  /* 绑定input值 */
+  bindKeyInput: function (e) {
+    this.setData({
+      inputValue: e.detail.value
+    })
+  },
+  /* 获取子组件 的点击添加信息 */
+  addComment:function(){  
+    this.setData({  
+      hiddenmodalput: !this.data.hiddenmodalput  
+    })  
+  },
+  //取消按钮  
+  cancel: function(){  
+    this.setData({  
+        hiddenmodalput: false  
+    });  
+  },  
+    //确认  
+  confirm: function(){  
+    // console.log(this.data.inputValue)
+    const id = this.data.article.id
+    const type = this.data.article.type
+    let content = this.data.inputValue
+    let commentList = this.data.comments
+    commentList.unshift({
+      nickname:null,
+      content,
+      like_nums:0
+    })
+    commentModel.addComment(id,type,content,(res) => {
+      // console.log(res)
+      if(res.errorCode === 0) {
+        this.setData({
+          comments:commentList
+        })
+      }
+    })
+    this.setData({  
+        hiddenmodalput: false  
+    })  
+  },
 
+  onLike:function (event) {
+    let behavior = event.detail.behavior
+    likeModel.like(behavior,this.data.article.id,this.data.article.type)
+  },
 
   setLike() {
     this.setData({
@@ -52,7 +90,7 @@ Page({
 
   getComments(id,type) {
     commentModel.getComments(id,type,(res) => {
-      console.log(res)
+      // console.log(res)
       this.setData({
         comments:res
       })

@@ -9,6 +9,18 @@ class CommentModel extends HTTP {
             success:sCallback
         })
     }
+    addComment(id,type,content,sCallback) {
+        this.request({
+            url:'comment/add',
+            method: 'POST',
+            data: {
+                art_id:id,
+                type,
+                content
+            },
+            success:sCallback
+        })
+    }
     // like (behavior, artID, category,sCallback) {
     //     let url = behavior == 'like' ? 'like' : 'like/cancel'
     //     this.request({
