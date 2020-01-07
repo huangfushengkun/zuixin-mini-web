@@ -3,14 +3,13 @@
     "pages/classic/classic",
     "pages/my/my",
     "pages/heart/heart",
-    "pages/like/like",
+    "pages/comment/comment",
     "pages/articleList/articleList"
   ],
   "window": {
     "navigationBarBackgroundColor": "#ffffff",
     "navigationBarTitleText": "美艳如诗",
-    "navigationBarTextStyle": "black",
-    "backgroundColor": "#d54620"
+    "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "selectedColor": "#000000",
@@ -32,8 +31,8 @@
       {
         "selectedIconPath": "/images/tab/classic@highlight.png",
         "iconPath": "/images/tab/classic.png",
-        "pagePath": "pages/like/like",
-        "text": "喜欢"
+        "pagePath": "pages/comment/comment",
+        "text": "简评"
       },
       {
         "selectedIconPath": "/images/tab/my@highlight.png",

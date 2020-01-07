@@ -1,0 +1,16 @@
+/* pages/like/like.wxss */
+.like-container{
+    /* margin-top:30rpx; */
+    width:100%;
+    margin-top: -13rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f5f5f5;
+  }
+  
+  .headline{
+    margin-top:30rpx;
+    width:97rpx;
+    height:42rpx;
+  }
