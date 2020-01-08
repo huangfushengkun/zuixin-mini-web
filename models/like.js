@@ -19,5 +19,17 @@ class LikeModel extends HTTP {
             success:sCallback
         })
     }
+
+    updataNickName (userInfo,sCallback) {
+        this.request({
+            url:'user/update/nickname',
+            method: 'POST',
+            data: {
+                nickname:userInfo.nickname,
+                avatarUrl:userInfo.avatarUrl
+            },
+            success:sCallback
+        })
+    }
 }
 export {LikeModel}

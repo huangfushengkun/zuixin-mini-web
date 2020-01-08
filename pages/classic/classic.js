@@ -27,7 +27,7 @@ Page({
         // console.log(res.code)
         if (res.code) {
           wx.request({
-            url: 'https://island.huangfushengkun.online/v1/token',
+            url: 'http://localhost:3000/v1/token',
             // url: 'https://island.huangfushengkun.online/v1/token/',
             method: "POST",
             data: {

@@ -3,6 +3,8 @@
 // import {BookModel} from '../../models/book.js'
 import {ClassicModel} from '../../models/classic.js'
 let classicModel = new ClassicModel()
+import {LikeModel} from '../../models/like'
+let likeModel = new LikeModel()
 // let bookModel = new BookModel()
 Page({
 
@@ -48,6 +50,10 @@ Page({
         if (data.authSetting['scope.userInfo']){
           wx.getUserInfo({
             success:data => {
+              console.log(data)
+              likeModel.updataNickName(data.userInfo,(res) => {
+                console.log(res)
+              })
               this.setData({
                 authorized:true,
                 userInfo:data.userInfo
