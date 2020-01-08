@@ -66,7 +66,7 @@ Page({
     console.log('about study')
   },
   onPreviewTap (e) {
-    console.log(e.detail)
+    // console.log(e.detail)
     const id = e.detail.id
     const type = e.detail.type
     if (id && type) {

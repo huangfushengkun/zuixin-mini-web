@@ -21,6 +21,12 @@ class CommentModel extends HTTP {
             success:sCallback
         })
     }
+    getMyConnents(sCallback){
+        this.request({
+            url:`comment/mycoments/`,
+            success:sCallback
+        })
+    }
     // like (behavior, artID, category,sCallback) {
     //     let url = behavior == 'like' ? 'like' : 'like/cancel'
     //     this.request({

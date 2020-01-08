@@ -7,10 +7,29 @@
     flex-direction: column;
     align-items: center;
     background-color: #f5f5f5;
-  }
+}
   
-  .headline{
-    margin-top:30rpx;
-    width:97rpx;
-    height:42rpx;
-  }
+.headline{
+  margin-top:30rpx;
+  width:97rpx;
+  height:42rpx;
+}
+.preview-container{
+  margin-top:30rpx;
+  display: flex;
+  flex-direction: row;
+  padding:0 30rpx;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.preview{
+  margin-bottom: 30rpx;
+}
+.my-comments {
+  margin-top: 30rpx;
+  width: 100%;
+  text-align: center;
+  font-size: 40rpx;
+  font-weight: 500;
+}

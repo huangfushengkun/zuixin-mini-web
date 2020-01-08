@@ -1,10 +1,13 @@
 // pages/like/like.js
+import {CommentModel} from '../../models/comment'
+let commentModel = new CommentModel()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    classics:[]
 
   },
 
@@ -12,7 +15,26 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.getMyConnents()
+  },
+  getMyConnents() {
+    commentModel.getMyConnents(res => {
+      // console.log(res)
+      this.setData({
+        classics:res
+      })
+    })
+  },
 
+  onPreviewTap(e) {
+    // console.log(e.detail)
+    const id = e.detail.id
+    const type = e.detail.type
+    if (id && type) {
+      wx.navigateTo({
+        url: `/pages/articleList/articleList?id=${id}&type=${type}`,
+      })
+    }
   },
 
   /**
@@ -26,7 +48,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    
   },
 
   /**
