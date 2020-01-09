@@ -28,7 +28,8 @@
     justify-content: space-between;
   }
   .comment-img {
-    width: 10%;
+    width: 70rpx;
+    height: 70rpx;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,7 +39,10 @@
   .comment-img .image {
     /* width: 80rpx; */
     /* height: 80rpx; */
+    text-align: center;
     font-size: 46rpx;
+    width: 100%;
+    height: 100%;
   }
   .comment-info {
     box-sizing: border-box;

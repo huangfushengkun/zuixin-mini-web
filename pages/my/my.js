@@ -50,10 +50,7 @@ Page({
         if (data.authSetting['scope.userInfo']){
           wx.getUserInfo({
             success:data => {
-              console.log(data)
-              likeModel.updataNickName(data.userInfo,(res) => {
-                console.log(res)
-              })
+              // console.log(data)
               this.setData({
                 authorized:true,
                 userInfo:data.userInfo
@@ -88,6 +85,11 @@ Page({
 
   onGetUserInfo(event) {
     const userInfo = event.detail.userInfo
+    // console.log(userInfo)
+    likeModel.updataNickName(userInfo,(res) => {
+      // console.log(res)
+    })
+    wx.setStorageSync('user',userInfo)
     userInfo && this.setData({
       userInfo,
       authorized:true

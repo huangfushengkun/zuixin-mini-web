@@ -41,12 +41,15 @@ Page({
     const id = this.data.article.id
     const type = this.data.article.type
     let content = this.data.inputValue
+    let userInfo = wx.getStorageSync('user')
     let commentList = this.data.comments
     commentList.unshift({
-      nickname:null,
+      nickname:userInfo.nickName,
+      avatar_url:userInfo.avatarUrl,
       content,
       like_nums:0
     })
+    console.log(commentList)
     commentModel.addComment(id,type,content,(res) => {
       // console.log(res)
       if(res.errorCode === 0) {

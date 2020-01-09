@@ -10,7 +10,8 @@
   <view wx:else class="comment-list">
     <view class="comment" wx:for="{{comments}}" wx:key="{{index}}">
       <view class="comment-img">
-        <view class="image">{{item.nickname[0] || '秘'}}</view>
+        <image class="image" src="{{item.avatar_url}}" wx:if="{{item.avatar_url}}"></image>
+        <view wx:else class="image">{{item.nickname[0] || '秘'}}</view>
       </view>
       <view class="comment-info">
         <view class="info-top">

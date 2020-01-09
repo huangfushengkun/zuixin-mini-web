@@ -26,7 +26,7 @@ Component({
   //声明周期
   lifetimes: {
     ready() {
-      console.log(this.properties.article)
+      // console.log(this.properties.article)
 
     },
     created () {
